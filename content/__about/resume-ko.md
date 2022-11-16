@@ -39,19 +39,28 @@ lang: 'ko'
 
 #### Design Platform
 
-- flex Design System 3.0(linear) 설계 및 개발
-  - [유연한 디자인 시스템 설계를](https://so-so.dev/react/design-system-decision-record/) 통해 표현의 제약없는 디자인 시스템 구축
-  - 반복되는 UI Pattern을 지원할 수 있도록 linear-extension 패키지 운영
-  - 컴포넌트 시나리오 기반의 테스트 구성
-- 디자이너와 개발자의 생산성을 높일 수 있는 도구 기획 및 개발
-  - 디자인 리소스와 코드를 동기화하는 도구 제작
-  - [한글과 영어를 지원하는 Lorem ipsum Figma plugin](https://www.figma.com/community/plugin/1097438299470908389/Lorem-ipsum-universal)
-  - [Skeleton Code generator Figma Plugin](https://www.figma.com/community/plugin/1072079296344464088/figeleton)
+**flex Design System 3.0(linear) 설계 및 개발**
+
+Design System 2.0의 문제를 해결하고 장기적으로 제품의 좋은 재료가 될 새로운 디자인 시스템 구축했습니다. 공통 영역이 보장해야 하는 범위를 정의하고 UX와 DX를 고려하여 구현하였습니다.
+
+- 표현의 제약을 줄이면서 동작의 일관성을 보장하는 [디자인 시스템 설계](https://so-so.dev/react/design-system-decision-record/)
+  - 다양한 컴포넌트 용례를 효율적으로 지원하기 위한 추상 컴포넌트 정의
+  - 동작의 일관성을 보장하는 Headless 컴포넌트 구성
+- 확장성을 보장하는 레이어의 문제를 반복되는 UI Pattern을 지원할 수 있도록 linear-extension 패키지 운영
+- 컴포넌트 시나리오 기반의 테스트 구성
+
+**디자이너와 개발자의 생산성을 높일 수 있는 도구 기획 및 개발**
+
+- 디자인 리소스 변경에 필요한 커뮤니케이션 비용을 줄이기 위해 figma와 코드를 동기화하는 스크립트 제작
+- 디자이너의 한글 컨텐츠에 대한 고민을 줄여주는 [Lorem ipsum Figma plugin](https://www.figma.com/community/plugin/1097438299470908389/Lorem-ipsum-universal) 제작
+- 실제 디자인 시안과 일치하는 스켈레톤 컴포넌트 코드를 자동 생성해주는 [Skeleton Code generator Figma Plugin](https://www.figma.com/community/plugin/1072079296344464088/figeleton) 제작
 
 #### flex2.0 개편
 
-- 2.0 프로젝트 환경 설정
-  - api 요청정보 기반으로 react-query를 자동 생성해주는 hook package 개발
+다양한 인사정책, 규모를 가진 고객사에서도 사용할 수 있는 제품으로 도약하기 위한 개편을 진행했습니다.
+
+- 2.0 프로젝트 설계 및 기반 패키지 제작
+  - [react-query](https://tanstack.com/query/v4)를 사용할 때 고유함이 보장되어야 하는 queryKey를 개발자가 직접 판단하지 않아도 되도록 api 요청정보 기반으로 자동생성 해주는 hook package 개발
   - stitches.js, react-hook-form등 flex1.0에서 사용하지 않던 라이브러리 도입, 팀 내 사용 가이드 전파
   - antd기반의 Design System2.0 개발 및 이후 유지보수
   - Framer 코드 컴포넌트 구성을 통해 디자인과 개발 단계에서 하나의 구현체를 사용할 수 있도록 개선
@@ -61,7 +70,7 @@ lang: 'ko'
 
 #### Core HR
 
-- ag-grid를 활용한 Editable Table을 공통 모듈화 하고, 이를 활용하여 [인사/계약 정보 대량변경](https://userguide.flex.team/de413145-ae7a-4643-a7dd-a41e0d61870d#3927052f-651a-457e-926e-71925c9a9bbe) 기능 개발
+- 정보를 대량으로 변경할 때 Excel과 유사한 변경 편의성을 제공하기 위해 ag-grid를 활용한 Editable Table을 공통 모듈화 하고, 이를 활용하여 [인사/계약 정보 대량변경](https://userguide.flex.team/de413145-ae7a-4643-a7dd-a41e0d61870d#3927052f-651a-457e-926e-71925c9a9bbe) 기능 개발
 - 회사별 구성원 초대 템플릿을 관리할 수 있는 형태로 온보딩 기능 개선
 
 <h3 class='no-border'>
@@ -76,10 +85,10 @@ lang: 'ko'
 
 #### Design System
 
-디자인, AND, iOS팀과 함께 BPL(Banksalad Product Language)디자인 시스템 설계 및 구현
+디자인 일관성과 생산성을 높이기 위한 [BPL(Banksalad Product Language)](https://blog.banksalad.com/tech/banksalad-product-language-design/) 을 설계 및 구현했습니다.
 
 - 2.0 첫 버전의 컴포넌트 개발 및 문서와 Storybook등 환경 구성
-- Bundling 설정 개선으로 번들 사이즈 최적화를 통해 사이즈 30% 감소
+- [rollup 설정 개선](https://so-so.dev/tool/rollup/rollupjs-config/)으로 번들 사이즈 30% 감소
 
 #### 공통 패키지 운영
 
